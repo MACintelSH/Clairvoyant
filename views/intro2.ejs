@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="/stylesheets/bootstrap.css">
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="/stylesheets/about.css">
+    <!-- <link rel="stylesheet" href="/stylesheets/index.css"> -->
+    <link rel="stylesheet" href="/stylesheets/intro2.css">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -39,9 +40,9 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav hc-nav-left">
             <li id="nav-home"><a href="home">Home</a></li>
-            <li id="nav-introduction"><a href="intro">Introduction</a></li>
+            <li id="nav-introduction" class="active"><a href="intro">Introduction</a></li>
             <li id="nav-demo"><a href="demo" target="_blank">Demo</a></li>
-            <li id="nav-about" class="active"><a href="about">About</a></li>
+            <li id="nav-about"><a href="about">About</a></li>
 <!--             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -62,15 +63,54 @@
       </div>
     </div>
 
+<!--     <div class="jumbotron hc-title-background">
+      <div class="container">
+        <div class="row hc-title">
+          <h1>Techs &amp; Guide</h1>
+          <h4>See the following video to learn about the technologies behind Clairvoyant system and learn about how to use the system.</h4>
+          <h3>Want Using Guide Only?</h3>
+          <h4>Jump to 1:09 of the video!</h4>
+        </div>
+      </div>
+    </div> -->
+
     <div class="container">
+
       <div class="row hc-first-row">
         <div class="col-md-12">
-          <h1>Me</h1>
-          <p class="lead">
-            This is self introduction of the author.
-          </p>
+          <h1>Techs &amp; Guide</h1>
+          <p class="lead">See the following video to learn about the technologies behind Clairvoyant system and learn about how to use the system.</p>
+        </div>
+        <div class="col-md-6"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 hc-intro-video-wrapper">
+          <video id="hc-intro-video" class="hc-intro-video" src="./videos/intro_480p.mp4" controls="controls"></video>
         </div>
       </div> <!-- /.row -->
+
+      <div class="row hc-video-switch">
+        <!-- <div class="col-md-4 col-sm-3 hide-xs"></div> -->
+        <div id="hc-video-guide" class="col-md-12 text-left hc-video-guide">
+          <h3>Want to see <strong class="hc-guide-only-btn"><em>Guide</em></strong> only?</h3>
+          <p class="lead">
+            Jump to 1:09 of the video, or just click <strong class="hc-guide-only-btn">HERE</strong>.
+            <!-- <a id="hc-guide-only-btn" class="btn btn-info btn-lg hc-video-switch" role="button">Guide Only</a> -->
+          </p>
+          
+        </div>
+        <div id="hc-video-full" class="col-md-12 text-left hc-video-full">
+          <h3>Want to see <strong class="hc-full-video-btn"><em>Full</em></strong> introduction?</h3>
+          <p class="lead">
+            Click <strong class="hc-full-video-btn">HERE</strong> to see the full introduction video.
+            <!-- <a id="hc-full-video-btn" class="btn btn-primary btn-lg hc-video-switch" role="button">Full Video</a> -->
+          </p>
+          
+        </div>
+          
+        </div>
+      </div>
 
     </div> <!-- /container -->
 
@@ -80,6 +120,23 @@
     <script src="/javascripts/jquery.js"></script>
     <script src="/javascripts/bootstrap.js"></script>
     <script src="javascripts/tools.js"></script>
+    <script>
+      var videoObj = $('#hc-intro-video')[0];
+
+      $('.hc-guide-only-btn').click(function(){
+        videoObj.currentTime = 69;
+        videoObj.play();
+        $('#hc-video-guide').hide();
+        $('#hc-video-full').show();
+      });
+      $('.hc-full-video-btn').click(function(){
+        videoObj.currentTime = 0;
+        videoObj.play();
+        $('#hc-video-guide').show();
+        $('#hc-video-full').hide();
+      })
+      
+    </script>
 
   </body>
 </html>

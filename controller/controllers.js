@@ -18,6 +18,14 @@ exports.intro = function(req, res) {
 	});
 };
 
+exports.intro2 = function(req, res) {
+	res.render('intro2', {
+		title: 'Clairvoyant',
+		req: req,
+		res: res
+	});
+};
+
 exports.demo = function(req, res) {
 	res.render('demo', {
 		title: 'Clairvoyant',

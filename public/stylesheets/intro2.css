@@ -1,0 +1,25 @@
+.hc-first-row {
+	margin-top: 51px;
+	padding-top: 20px;
+}
+
+.hc-intro-video-wrapper {
+	/*margin-top: 0;*/
+}
+.hc-intro-video {
+	width: 100%;
+	background-image: url("../images/loader_gif.gif");
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.hc-video-full {
+	display: none;
+}
+#hc-video-guide strong {
+	color: rgb(91, 192, 222);
+	cursor: pointer;
+}
+#hc-video-full strong {
+	color: rgb(66, 139, 202);
+	cursor: pointer;
+}
