@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clairvoyant System">
+    <meta name="author" content="HC">
+
+    <title>Clairvoyant</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="/stylesheets/index.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top hc-nav" role="navigation">
+
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="home">Clairvoyant</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav hc-nav-left">
+            <li id="nav-home" class="active"><a href="home">Home</a></li>
+            <li id="nav-introduction"><a href="intro">Introduction</a></li>
+            <li id="nav-demo"><a href="demo" target="_blank">Demo</a></li>
+            <li id="nav-about"><a href="about">About</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right hc-nav-right">
+            <li><a id="backToTop" class="backToTop">Back To Top</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div><!-- End of nav bar -->
+    
+    <div class="jumbotron hc-title-background">
+      <div class="container">
+        <div class="row hc-title">
+          <h1>Clairvoyant</h1>
+          <h3 class="hc-subtitle">An early prediction system for video hits.</h3>
+          <h3 class="hc-slogan">With several clicks, the future is in your hand, and the plan comes into your mind.</h3>
+        </div>
+      </div>
+    </div>
+
+    <div id="hc-index-what" class="jubotron hc-index-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h1>What's Clairvoyant?</h1>
+            <p class="lead">
+              Clairvoyant is an <u><em>early</em></u> prediction system on video hits. With the novel core algorithm called Shifted Shape Match Prediction <strong>(SSMP)</strong> built-in, the future of those new videos can be easily predicted with <u><em>few data</em></u>, and brought to you with visualized results.
+              <!-- It is an <strong><em>early</em></strong> prediction system, which tells the future of new videos.
+              It is <strong><em>flexible</em></strong> enough to fit all kinds of videos.
+              And, it can also provide information to help digging <strong><em>more</em></strong> from the data. -->
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <div id="hc-index-what-chart" class="hidden-xs hidden-sm"></div>
+            <img src="images/screenshot_prediction.png" alt="" id="hc-index-what-image" class="hidden-xs hidden-md hidden-lg col-xs-12 col-sm-12">
+            <!-- <img src="images/screenshot_prediction.png" alt="" id="hc-index-what-image" class="col-xs-12"> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+    <div id="hc-index-who" class="jubotron hc-index-content">
+      <div class="container">
+        <div class="row">
+          <div class="hidden-xs hidden-sm col-sm-6">
+            <!-- <div class="col-sm-2"></div> -->
+            <img src="images/producer.png" alt="" class="hidden-xs col-sm-9 col-xs-12">
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <h1>Who needs Clairvoyant?</h1>
+            <p class="lead">
+              - Are you video producer? <br>
+              - Are you VOD service provider?<br>
+              - Or advertiser?<br>
+              - Want to know the future of video hits as early as possible?<br>
+              - Disappointed by the long waiting time when using traditional time series analysis?<br>
+              - Then, you <strong>NEED</strong> it!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hc-index-features" class="jubotron hc-index-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h1>Features of Claivoyant</h1>
+            <h3>Prediction</h3>
+            <p class="lead"><u><em>Predict</em></u> the next 30 days according to the first 7 days</p>
+            <h3>Analysis</h3>
+            <p class="lead">Find out the  nearest <u><em>neighbors</em><u> to support analysis</p>
+            <!-- <h3>
+              Prediction<br>
+              <small><u><em>Predict</em></u> the next 30 days according to the first 7 days</small><br>
+              Analysis<br>
+              <small>Find out the  nearest <u><em>neighbors</em><u> to support analysis</small><br>
+            </h3> -->
+          </div>
+          <div class="col-sm-6 hc-index-next-col">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+              <a class="btn btn-primary btn-lg hc-index-next" href="intro" role="button">See techs behind => </a>
+            </div>
+            <div class="col-sm-2"></div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/bootstrap.js"></script>
+    <script src="javascripts/tools.js"></script>
+    <script src="/javascripts/Highcharts-3.0.2/js/highcharts.mod.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $('#hc-index-what-chart').highcharts({
+            title: {
+                text: 'Video hits prediction',
+                x: -20 //center
+            },
+            // subtitle: {
+            //     text: '',
+            //     x: -20
+            // },
+            // xAxis: {
+            //     categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+            //         'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            // },
+            yAxis: {
+                title: {
+                    text: 'Hits'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            // tooltip: {
+            //     valueSuffix: '°C'
+            // },
+            // legend: {
+            //     layout: 'vertical',
+            //     align: 'right',
+            //     verticalAlign: 'middle',
+            //     borderWidth: 0
+            // },
+            series: [{
+                name: 'Real',
+                data: [6781, 4765, 3582, 3042, 3012, 2641, 1941, 1715, 1513, 1309, 1197, 1170, 1194, 1168, 957, 800, 702, 585, 492, 542, 471, 455, 372, 314, 277, 280, 232, 230, 276, 289, 300, 237, 282, 296, 293, 289, 293]
+            }, {
+                name: 'Predict',
+                data: [null, null, null, null, null, null, null, 1949, 1661, 1440, 1373, 1384, 1182, 1121, 1047, 922, 888, 903, 865, 770, 721, 678, 600, 595, 515, 472, 441, 412, 417, 400, 387, 349, 332, 324, 317, 278, 298]
+            }]
+        });
+    });
+    </script>
+
+  </body>
+</html>

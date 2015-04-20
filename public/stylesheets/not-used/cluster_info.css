@@ -1,0 +1,45 @@
+.noMargin {
+	margin: 0px;
+}
+.expInfo dt, .expInfo dd, .expInfo select {
+	height: 20px;
+	line-height: 20px;
+}
+.expInfo {
+	margin: 0px;
+	border-right: 1px solid rgb(127,127,127);
+}
+.floatRight {
+	float: right;
+}
+.clusterInfoWrapper {
+	margin-bottom: 5px;
+	box-shadow: 0px 5px 5px rgba(127,127,127,0.8);
+}
+.clusterInfo {
+	margin: 0px;
+}
+#controlPanel .pager {
+	margin: 0px;
+}
+#controlPanel .pageId {
+	text-align: right;
+}
+.thumbnails .span2 {
+	border-right: 1px solid rgb(127,127,127);
+}
+.previous, .next {
+	cursor: pointer;
+}
+.cpListItem {
+	min-height: 200px;
+}
+.cpListItem h5 {
+	max-height: 40px;
+}
+#alerts {
+	margin-bottom: 10px;
+}
+.alert {
+	margin-bottom: 2px;
+}

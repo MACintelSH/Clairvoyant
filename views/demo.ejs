@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clairvoyant System">
+    <meta name="author" content="HC">
+
+    <title>Clairvoyant</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+
+    <!-- Date picker CSS -->
+    <link rel="stylesheet" href="/stylesheets/datepicker3.css">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="/stylesheets/demo.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top hc-nav" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="home">Clairvoyant</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav hc-nav-left">
+            <li id="nav-prediction" class="active"><a>Prediciton</a></li>
+            <li id="nav-heighbors"><a>Neighbors</a></li>
+<!--             <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li> -->
+          </ul>
+          <ul class="nav navbar-nav navbar-right hc-nav-right">
+            <li><a id="backToTop" class="backToTop">Back To Top</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="hc-mask" class="hc-mask"></div>
+      <div id="hc-chart-mask" class="hc-mask"></div>
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="row hc-chart-row">
+        <div id="chart" class="col-md-12 hc-chart"></div>
+      </div>
+
+      <div class="row">
+        <div id="neighborInfo" class="col-md-12 hc-neighbor-info">
+          <!-- <div class="row"> -->
+            <div class="col-sm-6 col-md-4 input-group hc-neighbor-num-group">
+              <span class="input-group-addon">Number of neighbors to list:</span>
+              <select name="neighborNum" id="neighborNum" class="form-control hc-neighbor-num" placeholder="Number of neighbors to list"></select>
+            </div>
+          <!-- </div> -->
+          
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              Information of Neighbors 
+            </div>
+            
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Similarity</th>
+                    <th></th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Genre</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div id="hc-sidebar" class="hc-sidebar">
+            <div id="selectedVideo" class="selectedVideo">
+              <h4>Hits In First 7 Days</h4>
+              <h1>...</h1>
+              <h4>Hits In Next 30 Days</h4>
+              <h1>...</h1>
+              <h4>Future / Past</h4>
+              <h1>...</h1>
+              <h4>Video Information</h4>
+              <div id="thumbnailSelectedVideo" class="thumbnail hc-thumbnail hc-thumbnail-active">
+                <div class="caption">
+                  <h4>Loading...</h4>
+                  <dl>
+                    <dt>ID</dt>
+                    <dd>...</dd>
+                    <dt>Genre</dt>
+                    <dd>...</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-md-4 -->
+
+        <div class="col-md-8">
+          <div id="listBlock" class="hc-list-block">
+            <div class="input-group">
+              <input type="text" id="queryDate" class="form-control form_datetime" readonly>
+              <span class="input-group-btn">
+                <button class="btn btn-primary" id="changeQueryDate" data-loading-text="loading...">Search</button>
+              </span>
+            </div>
+            <span class="help-block">Select the query date. The new videos on that date will be listed.</span>
+            
+
+            <div id="pageNav" class="row pageNav">
+              <div class="col-sm-6">
+                <ul class="pager">
+                  <li><a class="hc-previous">&larr; Older</a></li>
+                  <li><a class="hc-next">Newer &rarr;</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <div class="input-group">
+                  <span class="input-group-addon">Page</span>
+                  <input id="currentPage" type="text" class="form-control">
+                  <span id="totalPage" class="input-group-addon">/20</span>
+                  <span class="input-group-btn"><button id="jumpToPage" class="btn btn-primary">Go!</button></span>
+                </div>
+              </div>
+            </div>
+            <div id="progList" class="row hc-prog-list">
+              
+            </div>
+            
+            <div class="row visible-xs visible-sm">
+              <div class="col-md-12">
+                <ul class="pager">
+                  <li><a class="hc-previous">&larr; Older</a></li>
+                  <li><a class="hc-next">Newer &rarr;</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /.col-md-9 -->
+      </div> <!-- /.row -->
+
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/jquery.easing.1.3.js"></script>
+    <script src="/javascripts/bootstrap.js"></script>
+    <script src="/javascripts/Highcharts-3.0.2/js/highcharts.mod.js"></script>
+    <script src="/javascripts/bootstrap-datepicker.js"></script>
+    <!-- <script src="/javascripts/stickUp.js"></script> -->
+    <script src="/javascripts/index.js"></script>
+    <script src="javascripts/tools.js"></script>
+    <script src="/javascripts/view.js"></script>
+    <script src="/javascripts/model.js"></script>
+    <script src="/javascripts/controller.js"></script>
+  </body>
+</html>
