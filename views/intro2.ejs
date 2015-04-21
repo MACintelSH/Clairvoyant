@@ -43,18 +43,6 @@
             <li id="nav-introduction" class="active"><a href="intro">Introduction</a></li>
             <li id="nav-demo"><a href="demo" target="_blank">Demo</a></li>
             <li id="nav-about"><a href="about">About</a></li>
-<!--             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li> -->
           </ul>
           <ul class="nav navbar-nav navbar-right hc-nav-right">
             <li><a id="backToTop" class="backToTop">Back To Top</a></li>
@@ -63,23 +51,15 @@
       </div>
     </div>
 
-<!--     <div class="jumbotron hc-title-background">
-      <div class="container">
-        <div class="row hc-title">
-          <h1>Techs &amp; Guide</h1>
-          <h4>See the following video to learn about the technologies behind Clairvoyant system and learn about how to use the system.</h4>
-          <h3>Want Using Guide Only?</h3>
-          <h4>Jump to 1:09 of the video!</h4>
-        </div>
-      </div>
-    </div> -->
-
     <div class="container">
 
       <div class="row hc-first-row">
         <div class="col-md-12">
           <h1>Techs &amp; Guide</h1>
-          <p class="lead">See the following video to learn about the technologies behind Clairvoyant system and learn about how to use the system.</p>
+          <p class="lead">
+            See the following video to learn about the technologies behind Clairvoyant and learn about how to use the system. <br>
+            For more details see the <a href="http://dl.acm.org/citation.cfm?id=2661847" target="_blank"><em>original paper</em></a>.
+          </p>
         </div>
         <div class="col-md-6"></div>
       </div>
@@ -91,52 +71,58 @@
       </div> <!-- /.row -->
 
       <div class="row hc-video-switch">
-        <!-- <div class="col-md-4 col-sm-3 hide-xs"></div> -->
-        <div id="hc-video-guide" class="col-md-12 text-left hc-video-guide">
+        
+        <!-- <div class="col-sm-12 visible-sm-* visible-xs-*">
+          <a class="btn btn-info btn-lg hc-480p">480p</a>
+          <a class="btn btn-info btn-lg hc-720p">720p</a>
+          <a class="btn btn-info btn-lg hc-1080p">1080p</a>
+        </div> -->
+        <div class="col-sm-12 hidden-md hidden-lg text-right">
+          <div class="btn-group" role="group" aria-label="quality">
+            <button class="btn btn-default hc-quality hc-480p active">480p</button>
+            <button class="btn btn-default hc-quality hc-720p">720p</button>
+            <button class="btn btn-default hc-quality hc-1080p">1080p</button>
+          </div>
+        </div>
+
+        <div id="hc-video-guide" class="col-md-6 text-left hc-video-guide">
           <h3>Want to see <strong class="hc-guide-only-btn"><em>Guide</em></strong> only?</h3>
           <p class="lead">
             Jump to 1:09 of the video, or just click <strong class="hc-guide-only-btn">HERE</strong>.
             <!-- <a id="hc-guide-only-btn" class="btn btn-info btn-lg hc-video-switch" role="button">Guide Only</a> -->
           </p>
-          
         </div>
-        <div id="hc-video-full" class="col-md-12 text-left hc-video-full">
+
+        <div id="hc-video-full" class="col-md-6 text-left hc-video-full">
           <h3>Want to see <strong class="hc-full-video-btn"><em>Full</em></strong> introduction?</h3>
           <p class="lead">
             Click <strong class="hc-full-video-btn">HERE</strong> to see the full introduction video.
             <!-- <a id="hc-full-video-btn" class="btn btn-primary btn-lg hc-video-switch" role="button">Full Video</a> -->
           </p>
-          
         </div>
-          
-        </div>
-      </div>
+        
+        <div class="col-md-6 hidden-sm hidden-xs text-right">
 
+          <div class="btn-group" role="group" aria-label="quality">
+            <button class="btn btn-default hc-quality hc-480p active">480p</button>
+            <button class="btn btn-default hc-quality hc-720p">720p</button>
+            <button class="btn btn-default hc-quality hc-1080p">1080p</button>
+          </div>
+          <!-- <a class="btn btn-info btn-lg">480p</a>
+          <a class="btn btn-info btn-lg">720p</a>
+          <a class="btn btn-info btn-lg">1080p</a> -->
+        </div>
+          
+      </div> <!-- .hc-video-switch -->
     </div> <!-- /container -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/javascripts/jquery.js"></script>
-    <script src="/javascripts/bootstrap.js"></script>
+    <script src="javascripts/jquery.js"></script>
+    <script src="javascripts/bootstrap.js"></script>
     <script src="javascripts/tools.js"></script>
-    <script>
-      var videoObj = $('#hc-intro-video')[0];
-
-      $('.hc-guide-only-btn').click(function(){
-        videoObj.currentTime = 69;
-        videoObj.play();
-        $('#hc-video-guide').hide();
-        $('#hc-video-full').show();
-      });
-      $('.hc-full-video-btn').click(function(){
-        videoObj.currentTime = 0;
-        videoObj.play();
-        $('#hc-video-guide').show();
-        $('#hc-video-full').hide();
-      })
-      
-    </script>
+    <script src="javascripts/intro2.js"></script>
 
   </body>
 </html>
