@@ -85,7 +85,7 @@ Model.prototype.MFetchProgListBy = function (strDate) {
 
   $.ajax({
     type: 'POST',
-    url: '/proglist',
+    url: 'proglist',
     data: {'strDate': strDate},
     success: successCallback,
     error: function( jqXHR, textStatus, errorThrown ) {
